@@ -1,0 +1,25 @@
+/** COLORS */
+
+$primaryColor: #008fbe; // blue
+$darkGray: #58595B;
+$mediumGray: #666; // footer contact bg
+$lightGray: #999;
+$secondaryColor: $mediumGray; // gray
+
+$textColor: $darkGray;
+$linkColor: $secondaryColor;
+
+$headingFont: "Arial Bold", sans-serif;
+$headingFontAlt: Arial, sans-serif;
+$bodyFont: Arial, sans-serif;
+
+/** PARTIALS */
+
+@import "base";
+@import "header";
+@import "forms";
+@import "navigation";
+@import "mobile_nav";
+@import "content";
+@import "footer";
+@import "overrides";
