@@ -1,0 +1,72 @@
+body {
+    font-family: $baseFont;
+    font-size: $bodyFontSize;
+    background-color: #fff;
+    color: $textColor;
+}
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    #openNavOverlay {
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none !important;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: $linkHoverColor;
+    }
+}
+
+/** Headers */
+
+
+/** Misc */
+
+.txt-primary {
+    color: $primaryColor;
+}
+
+#openNavOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99995;
+    display: none;
+    background-color: rgba(black,0.5);
+}
+
+
+@media screen and (min-width: 992px) {
+    // release no-scroll above mobile viewport (max-width: 1049px)
+    body {
+        &.no-scroll {
+            overflow-y: auto;
+            position: static;
+            #openNavOverlay {
+                display: none;
+            }
+        }
+    }
+    .close-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 12px; // anything set with rem sizes down
+    }
+}
