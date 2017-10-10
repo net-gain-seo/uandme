@@ -4,21 +4,76 @@
     // Logop
     .logo {
         width: 100%;
-        max-width: 302px; // actual width
-        z-index: 99996;
+        max-width: 318px; // actual width + 16px padding
+        padding: 16px 16px 16px 0;
         a {
             display: block;
         }
     }
 }
 
+.sticky-logo {
+    display: none;
+}
 .flex-header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
 }
+
+.header-block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    .call-estimate {
+        text-align: right;
+    }
+    .estimate {
+        margin-bottom: 32px;
+        a {
+            background-color: $primaryColor;
+            padding: 24px 8px 8px;
+            color: #fff;
+            display: inline-block;
+            &:hover {
+                background-color: darken($primaryColor,10%);
+            }
+        }
+    }
+    .social {
+        padding-top: 30px;
+        margin-bottom: 25px;
+    }
+    .family-operated {
+        font-family: "Times New Roman", serif;
+        // font-size: 18px;
+        font-style: italic;
+        padding-right: 24px;
+        margin-bottom: 24px;
+        line-height: 1.1;
+    }
+    .phone {
+        font-size: 22px;
+        font-weight: bold;
+        a {
+            color: $textColor;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+.i-social {
+    display: inline-block;
+    margin-left:  8px;
+}
+.i-google-review {
+    margin-right: 32px;
+}
+
 
 /** Remove unneeded stuff -- this was a copy pasta from ngmvp */
 .sticky-header {
@@ -33,7 +88,7 @@
         > div { // .container
             // width: 100%;
             // padding: 0;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
         }
     }
@@ -70,20 +125,8 @@
 
 
 .header-nav {
+    height: 50px;
     background-color: $secondaryColor;
-    .main-nav,
-    .mobile-icons {
-        a {
-            height: 50px;
-            line-height: 50px;
-        }
-        .nav-phone {
-            padding-top: 3px;
-        }
-    }
-    .mobile-icons {
-        overflow: hidden;
-    }
     > div {
         display: flex;
         justify-content: flex-end;
@@ -91,7 +134,97 @@
     }
 }
 
-
+.main-nav,
 .mobile-icons {
-    display: none; // for now
+    a {
+        height: 50px;
+        line-height: 50px;
+    }
+    .nav-phone {
+        padding-top: 3px;
+    }
+}
+.mobile-icons {
+    overflow: hidden;
+    display: none;
+    font-size: 30px;
+    a {
+        color: #fff;
+        margin-left: 10px;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+    .nav-phone,
+    .nav-contact {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.175s ease-in;
+    }
+}
+
+.nav-toggle {
+    span {
+        color: $mediumGray;
+        transition: color 0.2s ease-in-out;
+    }
+    &:hover {
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.close-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 99999;
+    background-color: darken($primaryColor,10%);
+    border-bottom: 1px solid darken($primaryColor,15%);
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-400px);
+    transition: transform 0.15s ease-in-out;
+    &.open {
+        max-width: 100%;
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .flex-header {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-nav {
+        > div {
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .mobile-icons {
+            display: block;
+        }
+    }
+
+    .sticky-header {
+        .mobile-icons {
+            .nav-phone,
+            .nav-contact {
+                visibility: visible;
+                opacity: 1;
+                // transition: opacity 0.175s ease-in;
+            }
+        }
+    }
 }

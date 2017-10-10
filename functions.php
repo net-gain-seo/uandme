@@ -109,3 +109,4 @@ function get_the_post_id() {
 }
 
 include(STYLESHEETPATH.'/admin/custom_shortcodes.php');
+include(TEMPLATEPATH.'/admin/post_types/slider/index.php');

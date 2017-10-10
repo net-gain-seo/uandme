@@ -1,0 +1,24 @@
+.btn {
+    border-radius: 0;
+    cursor: pointer;
+}
+.btn-primary,
+.btn-primary-outline {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: #fff;
+    &:hover {
+        background-color: darken($primaryColor,10%);
+        color: #fff;
+    }
+
+}
+.btn-primary-outline {
+    border-width: 2px;
+    border-color: #fff;
+}
+
+.btn-wide {
+    padding-left: 36px;
+    padding-right: 36px;
+}

@@ -16,13 +16,22 @@
         <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/uandme-logo.png" alt=""></a></div>
 
         <div class="header-block">
-            <div class="request">
-                <a href="<?php echo home_url(); ?>/contact/" class="btn">Request Information</a>
+            <div class="social-text">
+                <div class="social">
+                    <a href="#" class="i-social i-google-review"><img src="<?php bloginfo('template_url'); ?>/img/i-google-review.png" alt=""></a>
+                    <a href="#" class="i-social i-facebook"><img src="<?php bloginfo('template_url'); ?>/img/i-facebook.png" alt=""></a>
+                    <a href="#" class="i-social i-twitter"><img src="<?php bloginfo('template_url'); ?>/img/i-twitter.png" alt=""></a>
+                    <a href="#" class="i-social i-google-plus"><img src="<?php bloginfo('template_url'); ?>/img/i-google.png" alt=""></a>
+                </div>
+                <div class="family-operated">Family owned and operated since 1923 <br />Four generations of service</div>
             </div>
-            <div class="phone">
-                <h3>
-                    <span>For Information Call</span>
-                    <a href="tel:15099799797">(509) 979-9797</a>
+            <div class="call-estimate">
+                <div class="estimate">
+                    <a href="<?php echo home_url(); ?>/contact/">Get An Estimate</a>
+                </div>
+                <h3 class="phone">
+                    <span>Call</span>
+                    <a href="tel:15618326156">561-832-6156</a>
                 </h3>
             </div>
         </div>
@@ -31,11 +40,11 @@
 
     <div class="header-nav">
         <div class="container">
-            <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-sticky.png" alt=""></a></div>
+            <!-- <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/sticky-logo.png" alt=""></a></div> -->
             <div class="mobile-icons">
                 <a href="tel:15099799797" class="nav-phone"><i class="fa fa-phone"></i></a>
                 <a href="<?php echo home_url(); ?>/contact/" class="nav-contact"><i class="fa fa-envelope"></i></a>
-                <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i></a>
+                <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i> <span>MENU</span></a>
             </div>
             <nav id="mainNav" class="mobile-nav" role="navigation">
                <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>

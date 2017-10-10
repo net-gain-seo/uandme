@@ -7,11 +7,13 @@
     var nav        = $('#mainNav');
     var siteHeader = $("#flexHeader");
 
-    function doResizeActions() {
+    function doResizeActions(sticky) {
 
 
         windowWidth = window.innerWidth;
-        stickAt     = $(siteHeader).innerHeight();
+        if(sticky) {
+            stickAt  = $(siteHeader).innerHeight();
+        }
 
         // Mobile or desktop nav
         if( windowWidth < 992 ) {
@@ -20,17 +22,17 @@
             $(nav).addClass('main-nav').removeClass('mobile-nav');
         }
 
-        return true;
+        // return true;
 
     }
 
     $(document).ready(function() {
-        doResizeActions();
+        doResizeActions(true);
     });
 
     // @todo set/check variable for peformance optimization
     $(window).on('resize', function() {
-        doResizeActions();
+        doResizeActions(false); // don't recalculate sticky-header
     });
 
 

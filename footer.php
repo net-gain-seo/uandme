@@ -7,23 +7,49 @@
 <?php if( $postId != 15 ): ?>
 <div class="container-fluid footer-contact-container">
     <div class="container">
-        <h2 class="inverse">Don't Miss Out On This One Of A Kind Opportunity.</h2>
-        <h3 class="inverse">Register Today For More Information.</h3>
-    <?php echo do_shortcode( '[contact-form-7 id="48" title="Footer Form" html_class="footer-form"]' ); ?>
+        <h3>Get a Moving Estimate</h2>
+    <?php // echo do_shortcode( '[contact-form-7 id="48" title="Footer Form" html_class="footer-form"]' ); ?>
     </div>
 </div>
 <?php endif; ?>
 
-<footer class="container-fluid site-footer">
+<footer class="site-footer">
     <div class="container">
-        <div class="flex-footer">
-            <div class="f-item logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-footer.png" alt=""></a></div>
+        <div class="flex-footer subfooter">
+            <div class="f-item agents">
+                <p>
+                    Agents for <a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/wheaton-sm.png" alt=""></a>
+                </p>
+                <p>Worldwide Moving I.C.C. No. MC-87113</p>
+                <p>FLA Movers Reg. No. IM400 PBC #M13</p>
+            </div>
 
-            <div class="f-item phone">
+            <div class="f-item links">
+                <ul>
+                    <li><a href="#">Moving</a></li>
+                    <li><a href="#">Storage</a></li>
+                    <li><a href="#">Packaging &amp; Shipping</a></li>
+                    <li><a href="#">Other Services</a></li>
+                </ul>
+            </div>
+
+            <div class="f-item contact">
                 <h3>
-                    For Information Call
-                    <a href="tel:15099799797">(509) 979-9797</a>
+                    <a href="tel:15618326156">Call 561-832-6156</a>
                 </h3>
+                <p>
+                    2626 Electronics Way<br />
+                    West Palm Beach, FL 33407
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright-container">
+        <div class="container">
+            <div class="flex-footer">
+                <div class="copyright">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved.</div>
+                <div class="netgain">Website Designed by <a href="http://www.netgainseo.com" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/netgain.png" alt=""></a></div>
             </div>
         </div>
     </div>
