@@ -6,7 +6,7 @@
         padding: 0 16px;
         background-color: transparent;
         color: #fff;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.15s ease-in;
     }
 
     ul {
@@ -17,7 +17,7 @@
     li {
         position: relative;
         a:hover,
-        &.current_page_item a {
+        &.current_page_item > a {
             background-color: $primaryColor;
         }
     }
@@ -32,7 +32,8 @@
             margin-left: 1px;
             &:hover {
                 > ul {
-                    display: block;
+                    opacity: 1;
+                    left: 0;
                 }
             }
         }
@@ -48,8 +49,9 @@
         padding-top: 5px;
         position: absolute;
         width: 250px;
-        left: 0;
-        display: none; // tmp
+        left: -9999em;
+        opacity: 0;
+        transition: opacity 0.15s ease-in;
         li {
             background-color: $secondaryColor;
             &:not(:last-of-type) {
