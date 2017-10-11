@@ -42,7 +42,7 @@
         <div class="container">
             <!-- <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/sticky-logo.png" alt=""></a></div> -->
             <div class="mobile-icons">
-                <a href="tel:15099799797" class="nav-phone">
+                <a href="tel:15618326156" class="nav-phone">
                     <i class="fa fa-phone"></i>
                     <span>CALL</span>
                 </a>

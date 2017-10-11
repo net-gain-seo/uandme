@@ -84,6 +84,7 @@
         top: 0;
         width: 100%;
         box-shadow: 0 3px 20px rgba(black,0.2);
+        height: 50px; // IE needs this
         // transition: max-height 0.15s ease-in-out;
         > div { // .container
             // width: 100%;
@@ -92,34 +93,7 @@
             align-items: center;
         }
     }
-    .flex-header {
-        .logo {
-            display: none;
-        }
-        .header-block {
-            display: none;
-            .inner-block {
-                // display: none;
-            }
-        }
-    }
-    .sticky-logo {
-        // display: block;
-        position: static;
-        a {
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out
-        }
-    }
-    .header-nav {
-        height: 50px; // IE needs this
-    }
-    .main-nav>ul>li {
-        // line-height: 50px;
-    }
-    .mast {
-        padding-top: 50px;
-    }
+    padding-top: 50px;
 }
 
 
