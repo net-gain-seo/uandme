@@ -13,6 +13,13 @@
     }
 
 }
+.btn-primary {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    &:hover {
+        border-color: darken($primaryColor,10%);
+    }
+}
 .btn-primary-outline {
     border-width: 2px;
     border-color: #fff;
@@ -21,4 +28,20 @@
 .btn-wide {
     padding-left: 36px;
     padding-right: 36px;
+}
+
+.btn-arrows {
+    &:after {
+        content: "\f101";
+        font-family: "FontAwesome";
+        display: inline-block;
+        // font-size: 40px;
+        font-weight: normal;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        transition: transform 0.2s ease-in-out;
+    }
+    &:hover:after {
+        transform: translateX(80%);
+    }
 }
