@@ -42,9 +42,20 @@
         <div class="container">
             <!-- <div class="sticky-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/sticky-logo.png" alt=""></a></div> -->
             <div class="mobile-icons">
-                <a href="tel:15099799797" class="nav-phone"><i class="fa fa-phone"></i></a>
-                <a href="<?php echo home_url(); ?>/contact/" class="nav-contact"><i class="fa fa-envelope"></i></a>
-                <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i> <span>MENU</span></a>
+                <a href="tel:15099799797" class="nav-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>CALL</span>
+                </a>
+
+                <a href="<?php echo home_url(); ?>/contact/" class="nav-contact">
+                    <i class="fa fa-envelope"></i>
+                    <span>CONTACT</span>
+                </a>
+
+                <a href="javascript:void(0);" id="navToggle" class="nav-toggle">
+                    <i class="fa fa-bars"></i>
+                    <span>MENU</span>
+                </a>
             </div>
             <nav id="mainNav" class="mobile-nav" role="navigation">
                <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>

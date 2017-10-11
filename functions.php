@@ -1,8 +1,8 @@
 <?php
 
-if ( ! function_exists( 'ngmvp_setup' ) ) :
+if ( ! function_exists( 'nguandme_setup' ) ) :
 
-    function ngmvp_setup() {
+    function nguandme_setup() {
         /**
          * Enable theme support features
          *
@@ -41,17 +41,49 @@ if ( ! function_exists( 'ngmvp_setup' ) ) :
 
     } // end setup function
 endif;
-add_action( 'after_setup_theme', 'ngmvp_setup' );
+add_action( 'after_setup_theme', 'nguandme_setup' );
 
 /**
  * Enqueue scripts and styles.
  */
-function ngmvp_scripts() {
+function nguandme_scripts() {
     wp_enqueue_script( 'ngacustom', get_bloginfo('template_url') . '/js/custom.js', 'jquery', '1.0', true );
-    wp_enqueue_style( 'ngmvp_main', get_bloginfo('template_url') . '/main.css', array('bootstrap'), false );
+    wp_enqueue_style( 'nguandme_main', get_bloginfo('template_url') . '/main.css', array('bootstrap'), false );
     wp_enqueue_style( 'fontawesome', get_bloginfo('template_url') . '/css/font-awesome.min.css' );
 }
-add_action( 'wp_enqueue_scripts', 'ngmvp_scripts' );
+add_action( 'wp_enqueue_scripts', 'nguandme_scripts' );
+
+
+/*
+* Testimonials
+*
+*/
+// Our custom post type function
+// Will use slick js, which is already enqueued by the slider post_type
+function create_cpt_testimonials() {
+
+    register_post_type( 'testimonials',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Testimonials' ),
+                'singular_name' => __( 'Testimonial' )
+            ),
+            'supports' => array( 'title', 'editor', 'page-attributes' ),
+            'public' => true,
+            'publicly_queryable' => true,
+            'show_ui' => true,
+            'exclude_from_search' => true,
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'testimonials', 'with_front' => false ),
+            'capability_type' => 'post',
+            'has_archive' => true,
+            'hierarchical' => false,
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_cpt_testimonials' );
 
 
 /// ADD CUSTOM FIELDS FOR PAGES (HEADER MAST)

@@ -52,8 +52,8 @@ main {
     }
 }
 
-/** Bottom Cards on Front Page */
-.fp-btm-cards {
+/** Triple cards - common element (on front page and about us currently) */
+.ce-cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -107,6 +107,50 @@ main {
     }
 }
 
+/**
+ * PAGES
+ */
+
+.page-content {
+    h1 {
+        margin-bottom: 2.75rem;
+    }
+}
+
+.page-lead-in {
+    background-color: $lightGray;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contact-page-container {
+    margin-top: 40px;
+    .col-form {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        background-color: $lightGray;
+    }
+    .col-img {
+        align-self: flex-end;
+        padding-top: 31px;
+        padding-left: 32px;
+        p:last-child {
+            margin: 0;
+        }
+    }
+}
+.btm-map {
+    iframe {
+        display: block;
+        width: 100%;
+        min-height: 600px;
+    }
+}
+
 .light-bg {
     background-color: $lightGray;
     padding-top: 40px;
@@ -121,12 +165,23 @@ main {
             text-align: center;
         }
     }
-    .fp-btm-cards {
+    .ce-cards {
         .card {
             max-width: 100%;
             width: 100%;
             flex: 1 0 100%;
             margin-bottom: 40px;
+        }
+    }
+    .contact-page-container {
+        .col-img {
+            text-align: center;
+            padding-left: 15px;
+        }
+    }
+    .btm-map {
+        iframe {
+            min-height: 400px;
         }
     }
 }

@@ -1,0 +1,333 @@
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    // -webkit-appearance: none;
+    font-family: inherit;
+    font-size: 14px;
+    padding-right: 8px;
+    padding-left: 8px;
+
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    color: rgba(0, 0, 0, 0.75);
+}
+select {
+    padding: 5px;
+}
+.textarea-lg {
+    height: 96px;
+}
+::-webkit-input-placeholder {
+    color: $darkGray;
+}
+
+.contact-page-form {
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        background-color: transparent;
+        border-color: $mediumGray;
+        border-width: 1px;
+        color: $textColor;
+        max-width: 100%;
+        font-size: 16px;
+    }
+    ::-webkit-input-placeholder {
+        color: lighten($mediumGray,10%);
+    }
+    textarea {
+        min-height: 115px;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    > p {
+        min-width: 50%;
+        flex: 1 0 50%;
+        padding: 0 16px;
+    }
+    .input-name,
+    .input-service,
+    .input-message {
+        flex-basis: 100%;
+    }
+    .submit-container {
+        flex-basis: 100%;
+        margin-top: 24px;
+        padding-left: 16px;
+        > p {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .btn {
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 16px;
+            height: 53px;
+            line-height: 53px;
+            padding: 0 24px;
+        }
+        > .wpcf7-form-control-wrap {
+            width: 206px;
+            height: 53px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .page-recaptcha {
+            transform: scale(0.68);
+            transform-origin: 0px 0px;
+        }
+    }
+    .wpcf7-not-valid-tip {
+        color: #900;
+        font-size: 14px;
+        padding-top: 6px;
+    }
+    .wpcf7-response-output,
+    .wpcf7-validation-errors {
+        font-size: 14px;
+        margin: 24px auto 0 auto;
+        border-color: lighten(#900,10%);
+        background-color: #900;
+        color: lighten(#900,70%);
+        border-radius: 12px;
+        padding: 8px 16px;
+    }
+}
+
+.popover-form {
+    width: 90%;
+    margin: auto;
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        height: 2.6rem;
+        margin-top: 0.25rem;
+        background-color: $lightGray;
+        border-color: transparent;
+        border-width: 1px;
+        color: $textColor;
+        font-size: 1rem; // 16px
+    }
+    textarea {
+        min-height: 4rem;
+    }
+    .submit-container {
+        .btn {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        > .wpcf7-form-control-wrap {
+            // outline: 1px solid #000;
+            width: 206px;
+            height: 51px;
+        }
+        .popover-recaptcha {
+            transform: scale(0.68);
+            transform-origin: 0px 0px;
+        }
+    }
+    label {
+        display: block;
+        font-size: 0.9rem;
+        color: $darkGray;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    p,
+    > .wpcf7-form-control-wrap {
+        flex: 1 0 0%;
+        padding: 4px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .submit-container {
+        // flex: 1 0 100%;
+        // margin-top: 32px;
+        text-align: center;
+        .btn {
+            font-weight: bold;
+            padding: 0 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 20px;
+        }
+        // submit button container inserted by CF7
+        > p {
+            display: inline-block;
+            vertical-align: middle
+        }
+        // captcha wrapper inserted by contact form 7
+        > .wpcf7-form-control-wrap {
+            position: relative;
+            width: 194px;
+            height: 46px;
+            padding: 0;
+            margin: -2px 0 0 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    // reCaptcha
+    .footer-recaptcha {
+        transform: scale(0.64);
+        transform-origin: 0 0;
+    }
+    iframe {
+        position: relative;
+    }
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        font-size: 18px;
+        background: transparent;
+        border: 2px solid #fff;
+    }
+    ::-webkit-input-placeholder {
+        color: $lightGray;
+    }
+    div.wpcf7-response-output {
+        margin: 24px auto 0 auto;
+        color: #eee;
+    }
+    .wpcf7-not-valid-tip {
+        color: yellow;
+        font-size: 14px;
+        padding-top: 6px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .footer-form {
+        p {
+            flex-basis: 25%
+        }
+        .submit-container {
+            margin-top: 24px;
+            flex-basis: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .contact-page-form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        > p {
+            flex-basis: 50%;
+            padding: 0 8px;
+            &.textarea {
+                flex-basis: 100%;
+            }
+        }
+        .submit-container {
+            text-align: center;
+        }
+
+        select,
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="password"],
+        input[type="number"],
+        input[type="search"],
+        textarea {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-contact-container {
+        .container {
+            width: 100% !important;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .footer-form {
+        p {
+            flex-basis: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-form {
+        p {
+            flex-basis: 100%;
+        }
+        .submit-container {
+            > .wpcf7-form-control-wrap { // recaptcha
+                margin-right: 17px;
+            }
+            > p {
+                margin-top: 24px;
+            }
+        }
+    }
+    .contact-page-form {
+        .submit-container {
+            text-align: center;
+            > p {
+                display: block;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .contact-page-form {
+        .submit-container {
+            text-align: center;
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 491px) {
+    .contact-page-form {
+        > p {
+            flex-basis: 100%;
+        }
+    }
+}

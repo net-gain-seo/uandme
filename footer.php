@@ -4,11 +4,11 @@
     $postId = get_the_post_id();
 ?>
 
-<?php if( $postId != 15 ): ?>
+<?php if( $postId != 48 ): ?>
 <div class="container-fluid footer-contact-container">
     <div class="container">
         <h3>Get a Moving Estimate</h2>
-    <?php // echo do_shortcode( '[contact-form-7 id="48" title="Footer Form" html_class="footer-form"]' ); ?>
+    <?php echo do_shortcode( '[contact-form-7 id="149" title="Footer Form" html_class="footer-form"]' ); ?>
     </div>
 </div>
 <?php endif; ?>
