@@ -8,6 +8,9 @@ main {
     padding-top: 32px;
     padding-bottom: 32px;
     text-align: center;
+    h3 {
+        margin-bottom: 0;
+    }
     p {
         margin: 0;
     }
@@ -38,11 +41,12 @@ main {
     }
     .card-title {
         text-transform: uppercase;
-        font-weight: bold;
+        font-size: $h2FontSize;
+        // font-weight: bold;
         margin: 0;
     }
     .card-text {
-        font-size: 16px
+        font-size: 18px
     }
     .card-footer {
         border: none;
@@ -79,6 +83,7 @@ main {
     }
     .card-title {
         text-transform: uppercase;
+        font-size: $h2FontSize;
         font-weight: bold;
         margin-bottom: 40px;;
         color: $primaryColor;
@@ -115,6 +120,12 @@ main {
     h1 {
         margin-bottom: 2.75rem;
     }
+    ul {
+        padding-left: 24px;
+    }
+    li {
+        margin: 8px 0;
+    }
 }
 
 .page-lead-in {
@@ -124,6 +135,54 @@ main {
     margin-bottom: 30px;
     *:last-child {
         margin-bottom: 0;
+    }
+}
+
+// light gray bg full width with image in second column - no padding!
+.no-pad-img {
+    background-color: $lightGray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .row {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .col-info {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .col-img {
+        text-align: right;
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.our-history-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.related-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    .r-item {
+        width: 46%;
+        max-width: 46%;
+        text-align: center;
+        margin-bottom: 16px;
+        padding: 16px;
+        background-color: $mediumGray;
+        color: #fff;
+        h1 {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -143,6 +202,18 @@ main {
         }
     }
 }
+
+.testimonials-listing {
+    article {
+        margin-bottom: 60px;
+    }
+    .the-testimonial {
+        p:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
 .btm-map {
     iframe {
         display: block;
@@ -155,6 +226,10 @@ main {
     background-color: $lightGray;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.col-img {
+    text-align: right;
 }
 
 @media screen and(max-width: 991px) {
@@ -173,11 +248,20 @@ main {
             margin-bottom: 40px;
         }
     }
+    .no-pad-img {
+        .col-img {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+    }
     .contact-page-container {
         .col-img {
             text-align: center;
             padding-left: 15px;
         }
+    }
+    .col-img {
+        text-align: center;
     }
     .btm-map {
         iframe {
@@ -195,11 +279,28 @@ main {
             margin-bottom: 25px;
         }
     }
+    .our-history-img {
+        justify-content: center;
+        flex-wrap: wrap;
+        p {
+            text-align: center;
+            flex-basis: 100%;
+        }
+    }
 }
 @media screen and(max-width: 549px) {
     .fp-top-cards {
         .card {
             flex-basis: 100%;
+        }
+    }
+}
+
+@media screen and(max-width: 497px) {
+    .fp-contact-bar {
+        .btn {
+            margin: 10px auto 0;
+            display: block;
         }
     }
 }

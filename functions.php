@@ -86,44 +86,6 @@ function create_cpt_testimonials() {
 add_action( 'init', 'create_cpt_testimonials' );
 
 
-/// ADD CUSTOM FIELDS FOR PAGES (HEADER MAST)
-function page_add_meta_box() {
-    add_meta_box( 'page_meta_box_mast_content',
-        'Page Mast Content',
-        'display_page_meta_box_mast_content',
-        'page'
-    );
-}
-
-add_action( 'admin_init', 'page_add_meta_box' );
-
-function display_page_meta_box_mast_content() {
-    global $post;
-
-    $mast_content =  get_post_meta( $post->ID, 'mast_content', true );
-    wp_editor( $mast_content,'mast_content', array('textarea_rows'=>5,'wpautop'=>true) );
-
-
-    echo '<input type="hidden" name="mast_flag" value="true" />';
-}
-
-function update_page_meta_box( $post_id, $post ) {
-    if ( $post->post_type == 'page' ) {
-        if ( isset($_POST['mast_flag']) ) {
-
-            if ( isset( $_POST['mast_content'] ) && $_POST['mast_content'] != '' ) {
-                update_post_meta( $post_id, 'mast_content', $_POST['mast_content'] );
-            } else {
-                update_post_meta( $post_id, 'mast_content', '');
-            }
-
-        }
-    }
-}
-
-add_action( 'save_post', 'update_page_meta_box', 10, 2 );
-
-
 
 /*
 * Utility Function

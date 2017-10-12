@@ -26,9 +26,41 @@ a {
 }
 
 /** Headers */
+h1 {
+    font-size: $h1FontSize;
+    margin-bottom: 2.75rem
+}
+h2 {
+    font-size: $h2FontSize;
+    margin-bottom: 2rem;
+}
+h3 {
+    font-size: $h3FontSize;
+    margin-bottom: 1.75rem;
+}
+h4 {
+    font-size: $h4FontSize;
+    margin-bottom: 1.5rem;
+}
 
+/** Font Sizes */
+.fs-h1 {
+    font-size: $h1FontSize;
+}
+
+.fs-h2 {
+    font-size: $h2FontSize;
+}
+
+.fs-h3 {
+    font-size: $h3FontSize;
+}
+.fs-h4 {
+    font-size: $h4FontSize;
+}
 
 /** Misc */
+
 
 .txt-primary {
     color: $primaryColor;

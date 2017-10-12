@@ -7,7 +7,7 @@
 <?php if( $postId != 48 ): ?>
 <div class="container-fluid footer-contact-container">
     <div class="container">
-        <h3>Get a Moving Estimate</h2>
+        <h2>Get a Moving Estimate</h2>
     <?php echo do_shortcode( '[contact-form-7 id="149" title="Footer Form" html_class="footer-form"]' ); ?>
     </div>
 </div>
@@ -18,7 +18,7 @@
         <div class="flex-footer subfooter">
             <div class="f-item agents">
                 <p>
-                    Agents for <a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/wheaton-sm.png" alt=""></a>
+                    Agents for <a href="https://www.wheatonworldwide.com/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/wheaton-sm.png" alt=""></a>
                 </p>
                 <p>Worldwide Moving I.C.C. No. MC-87113</p>
                 <p>FLA Movers Reg. No. IM400 PBC #M13</p>
@@ -26,10 +26,10 @@
 
             <div class="f-item links">
                 <ul>
-                    <li><a href="#">Moving</a></li>
-                    <li><a href="#">Storage</a></li>
-                    <li><a href="#">Packaging &amp; Shipping</a></li>
-                    <li><a href="#">Other Services</a></li>
+                    <li><a href="<?php echo home_url(); ?>/moving/">Moving</a></li>
+                    <li><a href="<?php echo home_url(); ?>/storage/">Storage</a></li>
+                    <li><a href="<?php echo home_url(); ?>/packing-shipping/">Packaging &amp; Shipping</a></li>
+                    <li><a href="<?php echo home_url(); ?>/other-services/">Other Services</a></li>
                 </ul>
             </div>
 
