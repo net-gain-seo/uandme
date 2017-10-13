@@ -44,8 +44,8 @@ function testimonial_slider($atts) {
 
     foreach( $query->posts as $post ) {
         $excerpt = str_replace('"', '', $post->post_content);
-        $excerpt = preg_replace( '/\s+?(\S+)?$/', '', substr( $excerpt, 0, 110 ) ) . '...&quot; <a href="'.home_url().'testimonials/">Read more &raquo;</a>';
-        $return .= '<div class="testimonial"><p>&quot;' . $excerpt . '</p><p>' . $post->post_title . '</p></div>';
+        $excerpt = preg_replace( '/\s+?(\S+)?$/', '', substr( $excerpt, 0, 110 ) ) . '...&quot; <a href="'.site_url().'/testimonials/">more &raquo;</a>';
+        $return .= '<div class="testimonial"><p>&quot;' . $excerpt . '</p><p class="t-author">' . $post->post_title . '</p></div>';
     }
 
     // $return .= '</div><button type="button" class="btn btn-main slick-testimonial-prev">&lt;</button><button type="button" class="btn btn-main slick-testimonial-next">&gt;</button>';

@@ -1,0 +1,43 @@
+.popover-modal {
+    background-color: $mediumGray;
+    color: #fff;
+    padding: 45px;
+    padding-top: 0;
+    .modal-header {
+        border: 0;
+        padding: 10px 15px;
+        margin: 0 0 20px;
+        background-color: $primaryColor;
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .modal-body {
+        padding: 0;
+    }
+}
+
+button.close {
+    color: #fff;
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 4px 8px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    text-shadow: none;
+}
+.close:focus,
+.close:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+@media screen and (max-width: 471px) {
+    .popover-modal {
+        padding: 30px;
+        padding-top: 0;
+    }
+}

@@ -1,6 +1,7 @@
 .btn {
     border-radius: 0;
     cursor: pointer;
+    font-size: $bodyFontSize;
 }
 .btn-primary,
 .btn-primary-outline {
@@ -44,4 +45,13 @@
     &:hover:after {
         transform: translateX(80%);
     }
+}
+
+/** push bootstrap modal down further when header is sticky */
+.sticky-header .modal {
+    top: 70px;
+}
+
+.modal-content {
+    border-radius: 0;
 }

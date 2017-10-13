@@ -115,8 +115,8 @@ select {
 }
 
 .popover-form {
-    width: 90%;
-    margin: auto;
+    // width: 90%;
+    // margin: 0 30px;
     select,
     input[type="text"],
     input[type="email"],
@@ -125,23 +125,34 @@ select {
     input[type="number"],
     input[type="search"],
     textarea {
-        height: 2.6rem;
-        margin-top: 0.25rem;
-        background-color: $lightGray;
-        border-color: transparent;
-        border-width: 1px;
-        color: $textColor;
-        font-size: 1rem; // 16px
+        height: 41.6px;
+        margin-top: 4px;
+        background-color: transparent;
+        border-color: #fff;
+        border-width: 2px;
+        color: #fff;
+        font-size: 16px;
+    }
+    option {
+        background: $mediumGray;
     }
     textarea {
-        min-height: 4rem;
+        min-height: 64px;
+    }
+    .input-email {
+        display: inline-block;
+        width: 49%;
+    }
+    .input-phone {
+        display: inline-block;
+        width: 49%;
     }
     .submit-container {
         .btn {
             font-weight: bold;
-            margin-top: 1.5rem;
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
+            margin-top: 24px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         > .wpcf7-form-control-wrap {
             // outline: 1px solid #000;
@@ -155,8 +166,8 @@ select {
     }
     label {
         display: block;
-        font-size: 0.9rem;
-        color: $darkGray;
+        font-size: 15px;
+        color: #fff;
     }
 }
 
@@ -165,7 +176,7 @@ select {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    padding-top: 32px;
+    // padding-top: 32px;
     p,
     > .wpcf7-form-control-wrap {
         flex: 1 0 0%;

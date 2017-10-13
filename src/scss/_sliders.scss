@@ -1,6 +1,9 @@
 /**
 * Front Page Slider
 */
+.slider {
+    display: none; // don't show util loaded
+}
 .slider-wrap { // needed to contain next/prev arrows
     position: relative;
     text-align: center;
@@ -65,19 +68,101 @@
 .testimonials-c {
     position: relative;
     overflow: hidden;
-    .container {
-    }
     .t-wrap {
         position: absolute;
         top: 50%;
-        right: 0;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: right;
+    }
+    .t-inner {
+        display: inline-block;
+        text-align: center;
+        max-width: 50%;
+        padding: 30px;
         background-color: rgba(white,0.75);
-        padding: 40px;
+    }
+    .testimonial {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .t-author {
+        font-size: 1rem;
+        &:before {
+            content: '-';
+        }
+    }
+    h1 {
+        margin-bottom: 1.2rem;
+        font-weight: bold;
+    }
+    > p:first-child { // img
+        margin-bottom: 0;
     }
 }
 .testimonails-slider {
     display: none;
+}
+
+
+/** Image Carousel on "Our History" page */
+
+.history-carousel {
+    display: none; // hide until slick initializes
+    // max-height: 300px;
+    p {
+        // min-height: 300px;
+        margin-bottom: 0;
+    }
+    .slick-prev,
+    .slick-next {
+        transition: all 0.2s ease-in-out;
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 40%;
+        top: calc(50% - 20px);
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-top: -10px;
+        padding: 0;
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+        z-index: 200;
+        background: #333;
+        border-radius: 20px;
+        opacity: 0.9;
+        &:hover {
+            opacity: 1;
+        }
+        &:before {
+            font-family: 'fontawesome';
+            font-size: 20px;
+            line-height: 1;
+            opacity: .9;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+        }
+    }
+    .slick-prev {
+        left: 25px;
+        &:before {
+            content: "\f104";
+        }
+    }
+    .slick-next {
+        right: 25px;
+        &:before {
+            content: '\f105';
+        }
+    }
 }
 
 @media screen and (max-width: 1249px) {
@@ -102,8 +187,20 @@
             padding: 24px 120px;
         }
     }
+    .testimonials-c {
+        .t-inner {
+            max-width: 60%;
+        }
+    }
 }
 
+@media screen and (max-width: 1199px) {
+    .testimonials-c {
+        .t-inner {
+            max-width: 100%;
+        }
+    }
+}
 @media screen and (max-width: 767px) {
     .slider {
         margin-bottom: 1px;
@@ -122,5 +219,8 @@
     }
     .slider-md-hidden {
         display: none !important;
+    }
+    .history-carousel-outer {
+        min-height: 430px;
     }
 }

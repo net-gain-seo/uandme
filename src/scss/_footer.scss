@@ -6,6 +6,7 @@
     h2 {
         font-size: $h1FontSize;
         font-weight: 600;
+        margin-bottom: 28px;
     }
     margin-top: 24px;
     margin-bottom: 24px;
@@ -121,6 +122,9 @@
                     border: none;
                     display: none;
                 }
+                &:first-child {
+                    padding-left: 0;
+                }
                 &:after {
                     content: ' ';
                     position: absolute;
@@ -144,6 +148,16 @@
                 display: block;
                 margin: 8px auto;
             }
+        }
+    }
+    .copyright-container {
+        .copyright,
+        .netgain {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .copyright {
+            margin-bottom: 30px;
         }
     }
 }

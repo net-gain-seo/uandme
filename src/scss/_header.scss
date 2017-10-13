@@ -6,14 +6,11 @@
         width: 100%;
         max-width: 318px; // actual width + 16px padding
         padding: 16px 16px 16px 0;
+        flex: 1;
         a {
             display: block;
         }
     }
-}
-
-.sticky-logo {
-    display: none;
 }
 .flex-header {
     display: flex;
@@ -27,6 +24,7 @@
     flex-flow: row wrap;
     justify-content: flex-end;
     align-self: flex-start;
+    flex: 1;
     .call-estimate {
         text-align: right;
     }

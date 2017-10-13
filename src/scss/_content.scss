@@ -89,10 +89,12 @@ main {
         color: $primaryColor;
     }
     .card-footer {
-        border: none;
-        background: none;
-        padding: 0;
-        margin-top: auto;
+        /** HIDE FOR NOW */
+        display: none;
+        // border: none;
+        // background: none;
+        // padding: 0;
+        // margin-top: auto;
     }
     .btn {
         width: 70%;
@@ -157,12 +159,6 @@ main {
             margin: 0;
         }
     }
-}
-
-.our-history-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .related-items {
@@ -277,6 +273,13 @@ main {
         .card {
             flex-basis: 50%;
             margin-bottom: 25px;
+        }
+    }
+    .related-items {
+        .r-item {
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
         }
     }
     .our-history-img {

@@ -47,9 +47,12 @@ add_action( 'after_setup_theme', 'nguandme_setup' );
  * Enqueue scripts and styles.
  */
 function nguandme_scripts() {
-    wp_enqueue_script( 'ngacustom', get_bloginfo('template_url') . '/js/custom.js', 'jquery', '1.0', true );
     wp_enqueue_style( 'nguandme_main', get_bloginfo('template_url') . '/main.css', array('bootstrap'), false );
     wp_enqueue_style( 'fontawesome', get_bloginfo('template_url') . '/css/font-awesome.min.css' );
+    wp_enqueue_style( 'slick-style', get_template_directory_uri().'/admin/post_types/slider/css/slick.css');
+    wp_enqueue_script( 'slick-script', get_template_directory_uri().'/admin/post_types/slider/js/slick.min.js',array('jquery'), '',true);
+    wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/admin/post_types/slider/js/slick-slider.js',array('slick-script'), '', true);
+    wp_enqueue_script( 'ngacustom', get_bloginfo('template_url') . '/js/custom.js', 'jquery', '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'nguandme_scripts' );
 

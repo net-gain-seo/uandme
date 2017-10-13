@@ -31,23 +31,11 @@ function create_custom_slider_post_types() {
     );
 }
 
-function slider_wp_enqueue_scripts(){
-    wp_register_style( 'slick-style', get_template_directory_uri().'/admin/post_types/slider/css/slick.css');
-    wp_register_script( 'slick-script', get_template_directory_uri().'/admin/post_types/slider/js/slick.min.js',array('jquery'));
-    wp_register_script( 'slick-slider', get_template_directory_uri().'/admin/post_types/slider/js/slick-slider.js',array('slick-script'));
-}
-add_action( 'wp_enqueue_scripts', 'slider_wp_enqueue_scripts' );
-
-
-
 function slider(){
 
-    wp_enqueue_style( 'slick-style');
-    wp_enqueue_script( 'slick-script');
-    wp_enqueue_script( 'slick-slider');
 
     extract( shortcode_atts( array(
-        'id' => '',
+        'id' => 'fpSlider',
         'class' => ''
     ), $atts ));
 
@@ -65,7 +53,7 @@ function slider(){
     $the_query = new WP_Query( $args );
 
     $return .= '<div class="slider-wrap">';
-    $return .= '<div class="slider">';
+    $return .= '<div id="'. $id .'" class="slider">';
         while ( $the_query->have_posts() ) : $the_query->the_post();
             $content = do_shortcode( get_the_content());
             $content = apply_filters('the_content',$content);

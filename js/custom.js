@@ -28,16 +28,6 @@
 
     $(document).ready(function() {
         doResizeActions(true);
-
-        // initiate slider
-        $('#testimonials').slick({
-            autoplay: true,
-            autoplaySpeed: 6000,
-            fade: true,
-            arrows: false
-            // prevArrow: $(".slick-testimonial-prev"),
-            // nextArrow: $(".slick-testimonial-next")
-        }).show();
     });
 
     // @todo set/check variable for peformance optimization
