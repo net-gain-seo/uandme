@@ -41,14 +41,14 @@
     <div class="header-nav">
         <div class="container">
             <div class="mobile-icons">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#popForm" class="nav-contact">
+                    <i class="fa fa-envelope"></i>
+                    <span>GET ESTIMATE</span>
+                </a>
+
                 <a href="tel:15618326156" class="nav-phone">
                     <i class="fa fa-phone"></i>
                     <span>CALL</span>
-                </a>
-
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#popForm" class="nav-contact">
-                    <i class="fa fa-envelope"></i>
-                    <span>CONTACT</span>
                 </a>
 
                 <a href="javascript:void(0);" id="navToggle" class="nav-toggle">
@@ -56,9 +56,13 @@
                     <span>MENU</span>
                 </a>
             </div>
+            <div class="sticky-get-quote">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#popForm">GET AN ESTIMATE</a>
+            </div>
             <nav id="mainNav" class="mobile-nav" role="navigation">
                <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>
             </nav>
+
         </div>
     </div>
 </header>

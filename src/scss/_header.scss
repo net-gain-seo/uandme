@@ -83,10 +83,7 @@
         width: 100%;
         box-shadow: 0 3px 20px rgba(black,0.2);
         height: 50px; // IE needs this
-        // transition: max-height 0.15s ease-in-out;
         > div { // .container
-            // width: 100%;
-            // padding: 0;
             justify-content: flex-end;
             align-items: center;
         }
@@ -142,6 +139,13 @@
         position: relative;
         top: 2px;
     }
+    .nav-contact {
+        background-color: $primaryColor;
+        color: #fff !important;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0;
+    }
 }
 
 .close-nav {
@@ -167,6 +171,43 @@
     }
 }
 
+.sticky-get-quote {
+    position: absolute;
+    top: 0;
+    right: 15px; // cancel out .container's padding
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    box-shadow: 1px 1px 8px rgba(black,0.5);
+    transform: translateY(15px);
+    transition: all 0.2s;
+    a {
+        display: block;
+        height: auto;
+        line-height: normal;
+        padding: 8px 16px;
+        background-color: $primaryColor;
+        color: #fff;
+        font-size: 18px;
+        &:hover {
+            background-color: darken($primaryColor,10%);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sticky-header {
+        .container {
+            position: relative;
+        }
+        .sticky-get-quote {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(50px);
+            transition: all 0.2s;
+        }
+    }
+}
 
 @media screen and (max-width: 991px) {
     .flex-header {
