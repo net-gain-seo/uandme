@@ -55,7 +55,7 @@
                     "contactType" : "Customer Service"
             }]
         }]
-</script>
+    </script>
 
     <?php wp_head(); ?>
 </head>
