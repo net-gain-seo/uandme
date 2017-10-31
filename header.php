@@ -4,6 +4,58 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-53992934-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="application/ld+json">
+        [{
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "U & Me Moving",
+            "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "2626 Electronics Way",
+                    "addressCountry": "US",
+                    "addressLocality": "West Palm Beach",
+                    "addressRegion": "FL",
+                    "postalCode": "33407"
+            },
+            "description": "Offices...Plants...Equipment. U & Me has moved a great many of the area's largest corporations, schools, manufacturing plants and department stores efficiently with the least disruption of their services.",
+            "legalName": "U & Me Moving",
+
+            "hasMap" : "https://www.google.com/maps/d/edit?authuser=0&authuser=0&hl=en&hl=en&mid=z0F82UWX4dPI.kmE4BL3FeEEA",
+
+            "telephone": "(561) 832-6156",
+            "url": "http://www.uandmemoving.com/",
+            "image" : "http://www.uandmemoving.com/images/logo.gif"
+        },
+
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "http://www.uandmemoving.com",
+            "sameAs" : [
+                    "https://www.facebook.com/UandMeMoving",
+                    "https://plus.google.com/101681162393193589896",
+                    "https://twitter.com/UandMeMoving"
+            ],
+
+
+            "logo" : "http://www.uandmemoving.com/images/logo.gif",
+            "contactPoint" : [{
+                    "@type" : "ContactPoint",
+                    "telephone" : "+15618326156",
+                    "contactType" : "Customer Service"
+            }]
+        }]
+</script>
 
     <?php wp_head(); ?>
 </head>
