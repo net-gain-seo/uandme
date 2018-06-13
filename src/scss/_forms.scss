@@ -86,9 +86,6 @@ select {
             padding: 0 24px;
         }
         > .wpcf7-form-control-wrap {
-            width: 206px;
-            height: 53px;
-            overflow: hidden;
             display: inline-block;
             vertical-align: middle;
         }
@@ -106,9 +103,6 @@ select {
     .wpcf7-validation-errors {
         font-size: 14px;
         margin: 24px auto 0 auto;
-        border-color: lighten(#900,10%);
-        background-color: #900;
-        color: lighten(#900,70%);
         border-radius: 12px;
         padding: 8px 16px;
     }
