@@ -42,7 +42,24 @@ h4 {
     font-size: $h4FontSize;
     margin-bottom: 1.5rem;
 }
-
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+table{
+    th, td {
+        border: 1px solid #000;
+        padding: 5px;
+    }
+}
 /** Font Sizes */
 .fs-h1 {
     font-size: $h1FontSize;
