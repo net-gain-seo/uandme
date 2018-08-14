@@ -1,7 +1,6 @@
 .popover-modal {
     background-color: $mediumGray;
     color: #fff;
-    padding: 45px;
     padding-top: 0;
     .modal-header {
         border: 0;
@@ -14,7 +13,7 @@
         }
     }
     .modal-body {
-        padding: 0;
+        padding: 0 45px;
     }
 }
 
@@ -37,7 +36,9 @@ button.close {
 
 @media screen and (max-width: 471px) {
     .popover-modal {
-        padding: 30px;
         padding-top: 0;
+        .modal-body {
+            padding: 0 30px;
+        }
     }
 }
