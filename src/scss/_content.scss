@@ -138,6 +138,13 @@ main {
     *:last-child {
         margin-bottom: 0;
     }
+    .special-heading {
+        margin: 0 0 2.75rem;
+        font-size: 1.875rem;
+        font-weight: 500;
+        line-height: 1.1;
+        display: block;
+    }
 }
 
 // light gray bg full width with image in second column - no padding!
