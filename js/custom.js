@@ -14,6 +14,13 @@
 		}
 	});
 
+	$('a[href^="tel:"]').click(function(){
+		var href = $(this).attr('href');
+		if ($(window).width() < 601) {
+			__gaTracker('send','event','Phone','Click',href);
+		}
+	});
+
 	var stickAt;
 	var windowWidth;
 	var isSticky = false;
