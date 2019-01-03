@@ -4,20 +4,36 @@
 		$form=jQuery(e.target);
 	
 		if($form.attr('id').search('f151')!=-1){
-			__gaTracker('send','event','Form','Submit','Contact');
+			//__gaTracker('send','event','Form','Submit','Contact');
+			gtag('event', 'Submit', {
+			  'event_category': 'Form',
+			  'event_label': 'Contact'
+			});
 		}
 		else if($form.attr('id').search('f149')!=-1){
-			__gaTracker('send','event','Form','Submit','Footer');
+			//__gaTracker('send','event','Form','Submit','Footer');
+			gtag('event', 'Submit', {
+			  'event_category': 'Form',
+			  'event_label': 'Footer'
+			});
 		}
 		else if($form.attr('id').search('f257')!=-1){
-			__gaTracker('send','event','Form','Submit','Popup');
+			//__gaTracker('send','event','Form','Submit','Popup');
+			gtag('event', 'Submit', {
+			  'event_category': 'Form',
+			  'event_label': 'Popup'
+			});
 		}
 	});
 
 	$('a[href^="tel:"]').click(function(){
 		var href = $(this).attr('href');
 		if ($(window).width() < 601) {
-			__gaTracker('send','event','Phone','Click',href);
+			//__gaTracker('send','event','Phone','Click',href);
+			gtag('event', 'Phone', {
+			  'event_category': 'Click',
+			  'event_label': href
+			});
 		}
 	});
 
