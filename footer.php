@@ -60,7 +60,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content popover-modal">
             <div class="modal-header">
-                <h1 class="modal-title title">GET AN ESTIMATE</h1>
+                <span class="modal-title title">GET AN ESTIMATE</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
