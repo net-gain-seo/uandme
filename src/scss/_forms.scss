@@ -166,11 +166,13 @@ select {
 }
 
 .footer-form {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
     // padding-top: 32px;
+    .flex-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
     p,
     > .wpcf7-form-control-wrap {
         flex: 1 0 0%;
