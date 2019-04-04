@@ -30,8 +30,8 @@
 		var href = $(this).attr('href');
 		if ($(window).width() < 601) {
 			//__gaTracker('send','event','Phone','Click',href);
-			gtag('event', 'Phone', {
-			  'event_category': 'Click',
+			gtag('event', 'Click', {
+			  'event_category': 'Phone',
 			  'event_label': href
 			});
 		}
