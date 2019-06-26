@@ -74,9 +74,9 @@ main {
         box-shadow: 0 0 12px rgba(black,0.5);
     }
     .card-img-top {
-        max-width: 165px;
         margin-left: auto;
         margin-right: auto;
+        width: auto;
     }
     .card-block {
         padding: 36px 0 20px;

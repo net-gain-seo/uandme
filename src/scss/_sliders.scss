@@ -224,3 +224,19 @@
         min-height: 430px;
     }
 }
+
+@media screen and(max-width: 549px) {
+    .testimonials-c {
+        & > p {
+            display: none;
+        }
+        .t-wrap {
+            position: static;
+            transform: none;
+            background-color: #ebebec;
+        }
+        .t-inner {
+            background: none;
+        }
+    }
+}
