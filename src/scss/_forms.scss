@@ -17,9 +17,8 @@ textarea {
     font-size: 14px;
     padding-right: 8px;
     padding-left: 8px;
-
     background-color: #fff;
-    border: 1px solid #eeeeee;
+    border: 1px solid $mediumGray;
     color: rgba(0, 0, 0, 0.75);
 }
 select {
@@ -41,18 +40,14 @@ select {
     input[type="number"],
     input[type="search"],
     textarea {
+        height: 41.6px;
+        margin-top: 4px;
         background-color: transparent;
-        border-color: $mediumGray;
-        border-width: 1px;
-        color: $textColor;
-        max-width: 100%;
-        font-size: 16px;
-    }
-    ::-webkit-input-placeholder {
-        color: lighten($mediumGray,10%);
+        border-width: 2px;
+        font-size: 20px;
     }
     textarea {
-        min-height: 115px;
+        min-height: 150px;
     }
     display: flex;
     flex-flow: row wrap;
@@ -69,7 +64,6 @@ select {
     }
     .submit-container {
         flex-basis: 100%;
-        margin-top: 24px;
         padding-left: 16px;
         > p {
             margin: 0;
@@ -78,9 +72,7 @@ select {
             vertical-align: middle;
         }
         .btn {
-            font-weight: bold;
             font-size: 20px;
-            margin-left: 16px;
             height: 53px;
             line-height: 53px;
             padding: 0 24px;
@@ -93,18 +85,15 @@ select {
             transform: scale(0.68);
             transform-origin: 0px 0px;
         }
+        .ajax-loader {
+            background-image: url("img/contact-ajax.gif");
+            background-size: contain;
+            height: 30px;
+            width: 30px;
+        }
     }
-    .wpcf7-not-valid-tip {
-        color: #900;
-        font-size: 14px;
-        padding-top: 6px;
-    }
-    .wpcf7-response-output,
-    .wpcf7-validation-errors {
-        font-size: 14px;
-        margin: 24px auto 0 auto;
-        border-radius: 12px;
-        padding: 8px 16px;
+    span.wpcf7-not-valid-tip {
+        font-style: italic;
     }
 }
 
@@ -125,13 +114,13 @@ select {
         border-color: #fff;
         border-width: 2px;
         color: #fff;
-        font-size: 16px;
+        font-size: 20px;
     }
     option {
         background: $mediumGray;
     }
     textarea {
-        min-height: 64px;
+        min-height: 150px;
     }
     .input-email {
         display: inline-block;
@@ -141,12 +130,16 @@ select {
         display: inline-block;
         width: 49%;
     }
+    span.wpcf7-not-valid-tip {
+        color: #FFF;
+        font-style: italic;
+    }
     .submit-container {
-        .btn {
-            font-weight: bold;
-            margin-top: 24px;
-            padding-left: 40px;
-            padding-right: 40px;
+        .ajax-loader {
+            background-image: url("img/popup-ajax.gif");
+            background-size: contain;
+            height: 30px;
+            width: 30px;
         }
         > .wpcf7-form-control-wrap {
             // outline: 1px solid #000;
@@ -160,7 +153,7 @@ select {
     }
     label {
         display: block;
-        font-size: 15px;
+        font-size: 18px;
         color: #fff;
     }
 }
@@ -170,26 +163,22 @@ select {
     .flex-wrapper {
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: baseline;
         justify-content: center;
-    }
-    p,
-    > .wpcf7-form-control-wrap {
-        flex: 1 0 0%;
-        padding: 4px;
-        margin-bottom: 0;
-        text-align: left;
+        > p {
+            flex: 1 0 0%;
+            padding: 4px;
+            margin-bottom: 0;
+            text-align: left;
+        }
     }
     .submit-container {
-        // flex: 1 0 100%;
-        // margin-top: 32px;
+        padding: 4px;
         text-align: center;
         .btn {
-            font-weight: bold;
-            padding: 0 48px;
             height: 48px;
-            line-height: 48px;
             font-size: 20px;
+            vertical-align: baseline;
         }
         // submit button container inserted by CF7
         > p {
@@ -205,6 +194,12 @@ select {
             margin: -2px 0 0 5px;
             display: inline-block;
             vertical-align: middle;
+        }
+        .ajax-loader {
+            background-image: url("img/popup-ajax.gif");
+            background-size: contain;
+            height: 30px;
+            width: 30px;
         }
     }
     // reCaptcha
@@ -223,7 +218,7 @@ select {
     input[type="number"],
     input[type="search"],
     textarea {
-        font-size: 18px;
+        font-size: 20px;
         background: transparent;
         border: 2px solid #fff;
     }
@@ -232,18 +227,18 @@ select {
     }
     div.wpcf7-response-output {
         margin: 24px auto 0 auto;
-        color: #eee;
     }
     .wpcf7-not-valid-tip {
-        color: yellow;
-        font-size: 14px;
+        font-size: 18px;
+        color: #FFF;
+        font-style: italic;
         padding-top: 6px;
     }
 }
 
 @media screen and (max-width: 1199px) {
     .footer-form {
-        p {
+        .flex-wrapper > p {
             flex-basis: 25%
         }
         .submit-container {
@@ -292,17 +287,14 @@ select {
         }
     }
     .footer-form {
-        p {
-            flex-basis: 50%;
+        .flex-wrapper > p {
+            flex-basis: 100%;
         }
     }
 }
 
 @media screen and (max-width: 480px) {
     .footer-form {
-        p {
-            flex-basis: 100%;
-        }
         .submit-container {
             > .wpcf7-form-control-wrap { // recaptcha
                 margin-right: 17px;
