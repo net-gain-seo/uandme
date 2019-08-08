@@ -197,8 +197,7 @@ main {
         background-color: $lightGray;
     }
     .col-img {
-        align-self: flex-end;
-        padding-top: 31px;
+        align-self: center;
         padding-left: 32px;
         p:last-child {
             margin: 0;
@@ -231,10 +230,6 @@ main {
     padding-bottom: 40px;
 }
 
-.col-img {
-    text-align: right;
-}
-
 @media screen and(max-width: 991px) {
     .fp-generations {
         .col-img {
@@ -260,7 +255,7 @@ main {
     .contact-page-container {
         .col-img {
             text-align: center;
-            padding-left: 15px;
+            padding: 25px 0 0;
         }
     }
     .col-img {

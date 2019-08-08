@@ -49,6 +49,9 @@ select {
     textarea {
         min-height: 150px;
     }
+    label {
+        display: block;
+    }
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
