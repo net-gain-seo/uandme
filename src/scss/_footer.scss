@@ -88,13 +88,6 @@
         .f-item {
             max-width: 50%;
         }
-        .contact {
-            max-width: 100%;
-            flex-basis: 100%;
-            display: block;
-            text-align: center;
-            margin-top: 32px;
-        }
     }
 }
 
@@ -141,6 +134,9 @@
         }
         .contact {
             order: 2;
+            .social {
+                margin-bottom: 1.5rem;
+            }
         }
         .agents {
             order: 3;

@@ -68,10 +68,6 @@
     display: inline-block;
     margin-left:  8px;
 }
-.i-google-review {
-    margin-right: 32px;
-}
-
 
 /** Remove unneeded stuff -- this was a copy pasta from ngmvp */
 .sticky-header {
@@ -275,11 +271,7 @@
             display: none;
         }
         .social {
-            padding-top: 16px;
-            margin-bottom: 12px;
+            display: none;
         }
-    }
-    .i-google-review {
-        margin-right: 0;
     }
 }
