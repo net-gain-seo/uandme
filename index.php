@@ -22,6 +22,13 @@
 		</div>
 
     <?php endwhile; // End of the loop. ?>
+	
+	<div class="container pt-5">
+		<?php 
+			echo paginate_links();
+		?> 
+	</div>
+    
 </div>
 
 
